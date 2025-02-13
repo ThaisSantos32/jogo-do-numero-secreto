@@ -2,7 +2,7 @@
 // criando a lista
 let listaDeNumerosSorteados= [];
 
-let numeroLimite=10;
+let numeroLimite=40;
 let numeroSecreto= gerarNumero();
 let tentativas=1;
 
@@ -29,6 +29,11 @@ function exibirTextoNatela(tag, texto) {
     responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
 }
 exibirMensagemInicial();
+function exibirMensagemInicial(){
+    exibirTextoNatela('h1','Jogo do número secreto');
+    exibirTextoNatela('p', 'Digite um número de 1 a 15:'); 
+
+
 
 function verificarChute (){
     // pegando o valor que digitarem no input
@@ -51,9 +56,6 @@ function verificarChute (){
     tentativas++;
     limparCampo();
 }
-function exibirMensagemInicial(){
-    exibirTextoNatela('h1','Jogo do número secreto');
-    exibirTextoNatela('p', 'Digite um número de 1 a 10:');
 }
 function limparCampo(){
     chute= document.querySelector('input');
